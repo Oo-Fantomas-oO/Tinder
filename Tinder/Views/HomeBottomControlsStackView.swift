@@ -15,9 +15,9 @@ class HomeBottomControlsStackView: UIStackView {
         distribution = .fillEqually
         heightAnchor.constraint(equalToConstant: 100).isActive = true
         
-        let subviews = [#imageLiteral(resourceName: "refresh_circle"), #imageLiteral(resourceName: "dismiss_circle"), #imageLiteral(resourceName: "super_like_circle"), #imageLiteral(resourceName: "like_circle"), #imageLiteral(resourceName: "boost_circle")].map { (img) -> UIView in
+        let subviews = [Images.refresh, Images.dismiss, Images.superLike, Images.like, Images.boost].map { (img) -> UIView in
             let button = UIButton(type: .system)
-            button.setImage(img.withRenderingMode(.alwaysOriginal), for: .normal)
+            button.setImage(img?.withRenderingMode(.alwaysOriginal), for: .normal)
             return button
         }
         
