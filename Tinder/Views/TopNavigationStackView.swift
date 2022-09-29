@@ -11,15 +11,15 @@ class TopNavigationStackView: UIStackView {
 
     let settingsButton  = UIButton(type: .system)
     let messageButton   = UIButton(type: .system)
-    let fireImageView   = UIImageView(image: Images.appIcon)
+    let fireImageView   = UIImageView(image: ButtonsImages.appIcon)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         heightAnchor.constraint(equalToConstant: 80).isActive = true
         fireImageView.contentMode = .scaleAspectFit
         
-        settingsButton.setImage(Images.topLeft?.withRenderingMode(.alwaysOriginal), for: .normal)
-        messageButton.setImage(Images.topRight?.withRenderingMode(.alwaysOriginal), for: .normal)
+        settingsButton.setImage(ButtonsImages.topLeft?.withRenderingMode(.alwaysOriginal), for: .normal)
+        messageButton.setImage(ButtonsImages.topRight?.withRenderingMode(.alwaysOriginal), for: .normal)
         
         [settingsButton, UIView(), fireImageView, UIView(), messageButton].forEach { (v) in
             addArrangedSubview(v)
