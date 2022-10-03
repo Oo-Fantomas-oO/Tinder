@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D0BBFB7728E327A600DDF302 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BBFB7628E327A600DDF302 /* User.swift */; };
+		D0BBFB7A28E5DE6D00DDF302 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BBFB7928E5DE6D00DDF302 /* CardViewModel.swift */; };
+		D0BBFB7C28E9FEBA00DDF302 /* Advertiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BBFB7B28E9FEBA00DDF302 /* Advertiser.swift */; };
 		D0ED385A28CA1E150046E7F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED385928CA1E150046E7F8 /* AppDelegate.swift */; };
 		D0ED385C28CA1E150046E7F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED385B28CA1E150046E7F8 /* SceneDelegate.swift */; };
 		D0ED385E28CA1E150046E7F8 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED385D28CA1E150046E7F8 /* HomeController.swift */; };
@@ -23,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		D0BBFB7628E327A600DDF302 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D0BBFB7928E5DE6D00DDF302 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		D0BBFB7B28E9FEBA00DDF302 /* Advertiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertiser.swift; sourceTree = "<group>"; };
 		D0ED385628CA1E150046E7F8 /* Tinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0ED385928CA1E150046E7F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0ED385B28CA1E150046E7F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,8 +57,17 @@
 			isa = PBXGroup;
 			children = (
 				D0BBFB7628E327A600DDF302 /* User.swift */,
+				D0BBFB7B28E9FEBA00DDF302 /* Advertiser.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D0BBFB7828E5DE4600DDF302 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D0BBFB7928E5DE6D00DDF302 /* CardViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		D0ED384D28CA1E150046E7F8 = {
@@ -76,14 +89,14 @@
 		D0ED385828CA1E150046E7F8 /* Tinder */ = {
 			isa = PBXGroup;
 			children = (
+				D0BBFB7828E5DE4600DDF302 /* ViewModels */,
 				D0ED387A28D1FE380046E7F8 /* Utilities */,
 				D0BBFB7528E3278A00DDF302 /* Model */,
 				D0ED387528D0795D0046E7F8 /* Extensions */,
 				D0ED386E28CA2DC60046E7F8 /* Views */,
-				D0ED386D28CA2DA70046E7F8 /* ViewControllers */,
+				D0ED386D28CA2DA70046E7F8 /* Controllers */,
 				D0ED385928CA1E150046E7F8 /* AppDelegate.swift */,
 				D0ED385B28CA1E150046E7F8 /* SceneDelegate.swift */,
-				D0ED385D28CA1E150046E7F8 /* HomeController.swift */,
 				D0ED385F28CA1E150046E7F8 /* Main.storyboard */,
 				D0ED386228CA1E180046E7F8 /* Assets.xcassets */,
 				D0ED386428CA1E180046E7F8 /* LaunchScreen.storyboard */,
@@ -92,11 +105,12 @@
 			path = Tinder;
 			sourceTree = "<group>";
 		};
-		D0ED386D28CA2DA70046E7F8 /* ViewControllers */ = {
+		D0ED386D28CA2DA70046E7F8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D0ED385D28CA1E150046E7F8 /* HomeController.swift */,
 			);
-			path = ViewControllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		D0ED386E28CA2DC60046E7F8 /* Views */ = {
@@ -198,8 +212,10 @@
 			files = (
 				D0ED387928D1CAD30046E7F8 /* CardView.swift in Sources */,
 				D0ED385E28CA1E150046E7F8 /* HomeController.swift in Sources */,
+				D0BBFB7C28E9FEBA00DDF302 /* Advertiser.swift in Sources */,
 				D0ED387228CA2E5F0046E7F8 /* HomeBottomControlsStackView.swift in Sources */,
 				D0ED387728D079980046E7F8 /* Extensions+UIView.swift in Sources */,
+				D0BBFB7A28E5DE6D00DDF302 /* CardViewModel.swift in Sources */,
 				D0ED385A28CA1E150046E7F8 /* AppDelegate.swift in Sources */,
 				D0BBFB7728E327A600DDF302 /* User.swift in Sources */,
 				D0ED385C28CA1E150046E7F8 /* SceneDelegate.swift in Sources */,

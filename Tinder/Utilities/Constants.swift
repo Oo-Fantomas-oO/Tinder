@@ -21,4 +21,5 @@ enum ButtonsImages {
 enum LadyImages {
     static let ladyOne      = "ladyOne"
     static let ledyTwo      = "ladyTwo"
+    static let slideOUut    = "slide_out_menu_poster"
 }

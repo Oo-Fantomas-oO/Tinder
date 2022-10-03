@@ -13,10 +13,21 @@ class HomeController: UIViewController {
     let cardsDeckView   = UIView()
     let bottomStackView = HomeBottomControlsStackView()
 
-    let users = [
-        User(name: "Kelly", age: 23, profession: "Music DJ", imageName: LadyImages.ladyOne),
-        User(name: "Jane", age: 18, profession: "Teacher", imageName: LadyImages.ledyTwo)
-    ]
+//    let users = [
+//        User(name: "Kelly", age: 23, profession: "Music DJ", imageName: LadyImages.ladyOne),
+//        User(name: "Jane", age: 18, profession: "Teacher", imageName: LadyImages.ledyTwo)
+//    ]
+    
+    let cardViewModels: [CardViewModel] = {
+        let producers = [
+            User(name: "Kelly", age: 23, profession: "Music DJ", imageName: LadyImages.ladyOne),
+            User(name: "Jane", age: 18, profession: "Teacher", imageName: LadyImages.ledyTwo),
+            Advertiser(title: "Slide Out Menu", brandName: "Gold Loaf", posterPhotoName: LadyImages.slideOUut)
+        ] as! [ProducedCardViewModel]
+        
+        let viewModel = producers.map({ return $0.toCardViewModel()})
+        return viewModel
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,17 +36,9 @@ class HomeController: UIViewController {
     }
     
     fileprivate func setupDummyCards() {
-        users.forEach { (user) in
+        cardViewModels.forEach { cardVM in
             let cardView = CardView(frame: .zero)
-            cardView.imageView.image = UIImage(named: user.imageName)
-            cardView.informationLabel.text = "\(user.name) \(user.age)\n\(user.profession)"
-            let attributedText = NSMutableAttributedString(string: user.name,
-                                                           attributes: [.font : UIFont.systemFont(ofSize: 32, weight: .heavy)])
-            attributedText.append(NSAttributedString(string: "\(user.age)",
-                                                     attributes: [.font : UIFont.systemFont(ofSize: 24, weight: .regular)]))
-            attributedText.append(NSAttributedString(string: "\n\(user.profession)",
-                                                     attributes: [.font : UIFont.systemFont(ofSize: 20, weight: .regular)]))
-            cardView.informationLabel.attributedText = attributedText
+            cardView.cardViewModel = cardVM
             cardsDeckView.addSubview(cardView)
             cardView.fillSuperview()
         }
