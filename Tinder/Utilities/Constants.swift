@@ -19,7 +19,18 @@ enum ButtonsImages {
 }
 
 enum LadyImages {
-    static let ladyOne      = "ladyOne"
-    static let ledyTwo      = "ladyTwo"
+    
+    enum Jane {
+        static let jane1 = "jane1"
+        static let jane2 = "jane2"
+        static let jane3 = "jane3"
+    }
+    
+    enum Kelly {
+        static let kelly1 = "kelly1"
+        static let kelly2 = "kelly2"
+        static let kelly3 = "kelly3"
+    }
+    
     static let slideOUut    = "slide_out_menu_poster"
 }
